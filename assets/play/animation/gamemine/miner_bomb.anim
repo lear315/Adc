@@ -1,0 +1,43 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "miner_bomb",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.06666666666666667,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b4e86537-d16a-4210-b2f5-c0cca7f9815e"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "2bf3b738-5430-4cc4-abbb-0683ed3d0415"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "652ac834-da89-4614-9bb6-fffb0813d4ed"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "fdb7ba87-eba1-4b4b-b998-5b848c0d0f4d"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

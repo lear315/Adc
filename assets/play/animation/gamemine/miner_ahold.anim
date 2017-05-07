@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "miner_ahold",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.08333333333333333,
+  "sample": 60,
+  "speed": 0.1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "0f67f4a8-c3ee-45a7-8285-fe1306cecade"
+            }
+          },
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "6f922f2a-3b40-4e63-828d-4cbf99f85f9f"
+            }
+          },
+          {
+            "frame": 0.03333333333333333,
+            "value": {
+              "__uuid__": "959cd99a-5898-4949-97f5-7894350b2f29"
+            }
+          },
+          {
+            "frame": 0.05,
+            "value": {
+              "__uuid__": "0b059812-8a1c-4353-a895-45e962f69375"
+            }
+          },
+          {
+            "frame": 0.06666666666666667,
+            "value": {
+              "__uuid__": "5fcaada2-77da-4c91-b9f6-1be27a3b1b95"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

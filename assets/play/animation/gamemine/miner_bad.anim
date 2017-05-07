@@ -1,0 +1,25 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "miner_bad",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 0.016666666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "d54d5de4-f6d4-42c6-a5c6-9c5b4fe253f7"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
