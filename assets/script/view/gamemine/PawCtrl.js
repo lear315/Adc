@@ -25,6 +25,10 @@ cc.Class({
         this.setLineLength(length);
     },
 
+    setMiner (miner) {
+        this.miner = miner;
+    },
+
     init () {
         this.state = {
             AWAIT : 1, //等待状态
@@ -38,7 +42,6 @@ cc.Class({
         //this.dropSpeed = 100; //爪子下抓的速度
         //this.raiseSpeed = 100; //爪子提起的速度
         this.line =  this.node.getChildByName("Line");
-        this.await();
     },
 
     changeState (state) {
@@ -60,6 +63,8 @@ cc.Class({
                 cc.rotateTo(this.speedFix/this.rotateSpeed, this.rotateMax)
             ));
         this.node.runAction(this.actionAwait);
+
+        this.miner.stopAnim()
     },
 
     drop () {
@@ -80,6 +85,8 @@ cc.Class({
             }, this)
         )
         this.node.runAction(this.actionDrop);
+        
+        this.miner.ahold()
     },
 
     raise () {

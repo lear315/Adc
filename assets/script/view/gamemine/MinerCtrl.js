@@ -16,11 +16,17 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        this.anim = this.node.getComponent(cc.Animation);
     },
 
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
+    //抓的动画
+    ahold () {
+        this.anim.play("miner_ahold"); 
+    },
 
-    // },
+    //停止动画
+    stopAnim () {
+        this.anim.stop(); 
+    },
+
 });

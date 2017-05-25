@@ -13,8 +13,10 @@ cc.Class({
     init () {
         this.isDropPawing = false //抓取的状态
         this.paw = this.canvas.getChildByName("Paw").getComponent("PawCtrl");
-        //this.miner = this.canvas.getChildByName("Miner").getComponent("Miner");
-
+        this.miner = this.canvas.getChildByName("Miner").getComponent("MinerCtrl");
+        this.paw.setMiner(this.miner);
+        this.paw.await();
+        
         this.canvas.on(cc.Node.EventType.TOUCH_START, event => {
             var touches = event.getTouches();
             var touchLoc = touches[0].getLocation();
@@ -45,7 +47,6 @@ cc.Class({
     // 放下爪子
     dropPaw: function () {
         if (this.paw.curState == this.paw.state.AWAIT) {
-            //this.isDropPawing = true;
             this.paw.drop();
         }
     },
