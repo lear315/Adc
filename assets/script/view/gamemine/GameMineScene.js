@@ -37,6 +37,8 @@ cc.Class({
 
         }, this.node);
 
+        cc.director.getCollisionManager().enabled = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
     },
 
     // called every frame

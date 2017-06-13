@@ -53,10 +53,13 @@
     "_components": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 3
       }
     ],
     "_prefab": {
-      "__id__": 3
+      "__id__": 4
     },
     "groupIndex": 0
   },
@@ -85,6 +88,58 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
+  },
+  {
+    "__type__": "cc.PolygonCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "points": [
+      {
+        "__type__": "cc.Vec2",
+        "x": -66,
+        "y": -22
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -47,
+        "y": 41
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -7,
+        "y": 59
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 54,
+        "y": 46
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 65,
+        "y": -5
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": 51,
+        "y": -43
+      },
+      {
+        "__type__": "cc.Vec2",
+        "x": -16,
+        "y": -58
+      }
+    ]
   },
   {
     "__type__": "cc.PrefabInfo",

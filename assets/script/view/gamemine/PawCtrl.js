@@ -42,6 +42,8 @@ cc.Class({
         //this.dropSpeed = 100; //爪子下抓的速度
         //this.raiseSpeed = 100; //爪子提起的速度
         this.line =  this.node.getChildByName("Line");
+
+        this.node.getComponent('cc.PolygonCollider').enabled = true;
     },
 
     changeState (state) {
