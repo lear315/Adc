@@ -1,11 +1,16 @@
+var BaseCtrl = require('BaseCtrl')
+//var D = require('DebugFunc')
+
 cc.Class({
-    extends: cc.Component,
+    extends: BaseCtrl,
 
     properties: {
         rotateSpeed: 10,
         rotateMax: 70,
         dropSpeed: 100,
         raiseSpeed: 100,
+        pawLeft: cc.SpriteFrame,
+        pawRight: cc.SpriteFrame,
     },
 
     // use this for initialization
@@ -143,6 +148,18 @@ cc.Class({
         }
         var pos = cc.p(x, y);
         return pos
+    },
+
+    //改变爪子贴图
+    changePawHold () {
+        D.print("dasdasd")
+        this.node.spriteFrame = this.pawLeft;       
+    },
+
+    //碰撞产生的时候调用
+    onCollisionEnter: function (other, self) {
+        console.log('on collision enter');
+        this.changePawHold();
     },
 
 
