@@ -1,5 +1,5 @@
 var BaseCtrl = require('BaseCtrl')
-//var D = require('DebugFunc')
+var D = require('DebugFunc')
 
 cc.Class({
     extends: BaseCtrl,
@@ -9,6 +9,7 @@ cc.Class({
         rotateMax: 70,
         dropSpeed: 100,
         raiseSpeed: 100,
+        paw: cc.SpriteFrame,
         pawLeft: cc.SpriteFrame,
         pawRight: cc.SpriteFrame,
     },
@@ -47,6 +48,7 @@ cc.Class({
         //this.dropSpeed = 100; //爪子下抓的速度
         //this.raiseSpeed = 100; //爪子提起的速度
         this.line =  this.node.getChildByName("Line");
+        this.gain =  this.node.getChildByName("Gain")
 
         this.node.getComponent('cc.PolygonCollider').enabled = true;
     },
@@ -112,6 +114,26 @@ cc.Class({
         this.node.runAction(this.actionRaise);
     },
 
+    raiseByGold () {
+        //抓住金子,提起爪子
+        if (this.actionDrop) {
+            this.node.stopAction(this.actionDrop);
+            this.actionDrop = null;
+        }
+        this.changeState(this.state.RAISE);
+        this.actionRaise = cc.sequence(
+            cc.moveTo(this.speedFix/this.raiseSpeed, this.orginPos),
+            cc.delayTime(0.5),
+            cc.callFunc(() => {
+                this.getComponent(cc.Sprite).spriteFrame = this.paw;  
+                this.gain.active = false
+
+                this.await();
+            }, this)
+        )
+        this.node.runAction(this.actionRaise);
+    },
+
     //获取爪子放下的距离
     getLength (ratete) {
         var height = 568; //高
@@ -151,15 +173,21 @@ cc.Class({
     },
 
     //改变爪子贴图
-    changePawHold () {
-        D.print("dasdasd")
-        this.node.spriteFrame = this.pawLeft;       
+    changePawHold (other) {
+        this.getComponent(cc.Sprite).spriteFrame = null;  
+        this.gain.active = true
+        var size = other.node.getComponent("GoldCtrl").size
+        this.gain.getChildByName('PGold').setScale(size/10)
+        other.node.removeFromParent();
     },
 
     //碰撞产生的时候调用
     onCollisionEnter: function (other, self) {
         console.log('on collision enter');
-        this.changePawHold();
+        this.changePawHold(other);
+        //拉回钩子
+        this.raiseByGold();
+    
     },
 
 

@@ -7,6 +7,9 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        cc.director.getCollisionManager().enabled = true;
+        //cc.director.getCollisionManager().enabledDebugDraw = true;
+
         this.init();
     },
 
@@ -36,9 +39,6 @@ cc.Class({
             console.log("--------------touch end-----------------")
 
         }, this.node);
-
-        cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
     },
 
     // called every frame
