@@ -5,6 +5,7 @@ cc.Class({
     },
 
     onLoad: function () {
+        console.log("load base")
     },
 
 });

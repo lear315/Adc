@@ -1,5 +1,7 @@
+var BaseScene = require('BaseScene')
+
 cc.Class({
-    extends: cc.Component,
+    extends: BaseScene,
 
     properties: {
         canvas: cc.Node
