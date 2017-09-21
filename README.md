@@ -1,2 +1,2 @@
-# Adc
-This is advanced design client base CocosCreator
+# hello-world
+Hello world new project template.
