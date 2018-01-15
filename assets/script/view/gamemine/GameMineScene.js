@@ -55,5 +55,9 @@ cc.Class({
         }
     },
 
+    // 退出游戏
+    exitGame: function () {
+        cc.game.end()
+    },
 
 });

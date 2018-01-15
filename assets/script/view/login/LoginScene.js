@@ -8,7 +8,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        this.showBagView()
+        // this.showBagView()
     },
 
     playGame: function () {
@@ -19,8 +19,8 @@ cc.Class({
         cc.loader.loadRes("play/prefabs/view/BagView", function (err, prefab) {
             var node = cc.instantiate(prefab);
             var scene = cc.director.getScene()
-            node.setPosition(scene.width/2, scene.height/2)
-            cc.director.getScene().addChild(node)
+            node.setPosition(1334/2, 750/2)
+            scene.addChild(node)
         })
     },
     
