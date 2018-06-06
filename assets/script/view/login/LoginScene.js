@@ -1,6 +1,7 @@
 var BaseScene = require('BaseScene')
 
 cc.Class({
+    // 
     extends: BaseScene,
 
     properties: {
