@@ -28,7 +28,7 @@ cc.Class({
     //动画更新后执行
     lateUpdate: function (dt) {
         var curPawPos = this.node.getPosition();
-        var length = cc.pDistance(curPawPos, this.orginPos);
+        var length = curPawPos.sub(this.orginPos).mag();
         this.setLineLength(length);
     },
 
@@ -169,7 +169,7 @@ cc.Class({
             x = x - dir*weight;
             y = y - length;
         }
-        var pos = cc.p(x, y);
+        var pos = cc.v2(x, y);
         return pos
     },
 
